@@ -8,6 +8,7 @@ import {
   BiWind,
   BiShowAlt,
 } from "react-icons/bi";
+import { WiStrongWind, WiHumidity, WiSunset, WiSunrise } from "react-icons/wi";
 
 const API_KEY = "0f8ca2f4ff712e4e9e189b30da0cbc64";
 
@@ -203,7 +204,7 @@ setWeatherForecast(forecastCall.data.list);
               <div>{Math.round(weather.wind.speed * 2.23694)}mph</div>
             </div>
             <div className=" text-5xl icon">
-              <BiWind />
+              <WiStrongWind />
             </div>
           </div>
           <div className=" flex items-center justify-center text-xl py-3 rounded-xl bg-[white] bg-opacity-40  ">
@@ -221,7 +222,7 @@ setWeatherForecast(forecastCall.data.list);
               <div>{weather.main.humidity}%</div>
             </div>
             <div className=" text-5xl icon">
-              <BiWind />
+            <WiHumidity />
             </div>
           </div>
           <div className=" flex items-center justify-center text-xl py-3 rounded-xl bg-[white] bg-opacity-40  ">
@@ -230,7 +231,7 @@ setWeatherForecast(forecastCall.data.list);
               <div>{getTimeWithApPm(weather.sys.sunrise)}</div>
             </div>
             <div className=" text-5xl icon">
-              <BiWind />
+              <WiSunrise />
             </div>
           </div>
           <div className=" flex items-center justify-center text-xl py-3 rounded-xl bg-[white] bg-opacity-40  ">
@@ -239,7 +240,7 @@ setWeatherForecast(forecastCall.data.list);
               <div>{getTimeWithApPm(weather.sys.sunset)}</div>
             </div>
             <div className=" text-5xl icon">
-              <BiWind />
+              <WiSunset />
             </div>
           </div>
           <div className=" flex items-center justify-center text-xl py-3 rounded-xl bg-[white] bg-opacity-40  ">
