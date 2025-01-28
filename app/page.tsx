@@ -200,57 +200,57 @@ setWeatherForecast(forecastCall.data.list);
       <div className="bottom-side">
         <div className="text-3xl text-white mt-10">Weather Details</div>
         <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-5 my-5  ">
-          <div className=" flex items-center justify-center text-xl py-3 rounded-xl bg-[white] bg-opacity-40  ">
+          <div className=" flex items-center justify-center text-lg sm:text-xl py-3 rounded-xl bg-[white] bg-opacity-40  ">
             <div className="mr-5">
               <div>Wind Speed</div>
               <div>{Math.round(weather.wind.speed * 2.23694)}mph</div>
             </div>
-            <div className=" lg:text-5xl icon">
+            <div className=" text-2xl lg:text-5xl icon">
               <WiStrongWind />
             </div>
           </div>
-          <div className=" flex items-center justify-center text-xl py-3 rounded-xl bg-[white] bg-opacity-40  ">
+          <div className=" flex items-center justify-center text-lg sm:text-xl py-3 rounded-xl bg-[white] bg-opacity-40  ">
             <div className="mr-5">
               <div>Visibility</div>
               <div>{weather.visibility / 1000}km</div>
             </div>
-            <div className=" lg:text-5xl icon">
+            <div className=" text-2xl lg:text-5xl icon">
               <BiShowAlt />
             </div>
           </div>
-          <div className=" flex items-center justify-center text-xl py-3 rounded-xl bg-[white] bg-opacity-40  ">
+          <div className=" flex items-center justify-center text-lg sm:text-xl py-3 rounded-xl bg-[white] bg-opacity-40  ">
             <div className="mr-5">
               <div>Humidity</div>
               <div>{weather.main.humidity}%</div>
             </div>
-            <div className=" lg:text-5xl icon">
+            <div className=" text-2xl lg:text-5xl icon">
             <WiHumidity />
             </div>
           </div>
-          <div className=" flex items-center justify-center text-xl py-3 rounded-xl bg-[white] bg-opacity-40  ">
+          <div className=" flex items-center justify-center text-lg sm:text-xl py-3 rounded-xl bg-[white] bg-opacity-40  ">
             <div className="mr-5">
               <div>Sunrise</div>
               <div>{getTimeWithApPm(weather.sys.sunrise)}</div>
             </div>
-            <div className=" lg:text-5xl icon">
+            <div className=" text-2xl lg:text-5xl icon">
               <WiSunrise />
             </div>
           </div>
-          <div className=" flex items-center justify-center text-xl py-3 rounded-xl bg-[white] bg-opacity-40  ">
+          <div className=" flex items-center justify-center text-lg sm:text-xl py-3 rounded-xl bg-[white] bg-opacity-40  ">
             <div className="mr-5">
               <div>Sunset</div>
               <div>{getTimeWithApPm(weather.sys.sunset)}</div>
             </div>
-            <div className=" lg:text-5xl icon">
+            <div className=" text-2xl lg:text-5xl icon">
               <WiSunset />
             </div>
           </div>
-          <div className=" flex items-center justify-center text-xl py-3 rounded-xl bg-[white] bg-opacity-40  ">
+          <div className=" flex items-center justify-center text-lg sm:text-xl py-3 rounded-xl bg-[white] bg-opacity-40  ">
             <div className="mr-5">
               <div>Wind Direction</div>
               <div>{getWindDirection(weather.wind.deg)}</div>
             </div>
-            <div className=" lg:text-5xl icon">
+            <div className="text-2xl lg:text-5xl icon">
               <WiWindDeg />
             </div>
           </div>
