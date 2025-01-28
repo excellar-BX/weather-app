@@ -129,7 +129,6 @@ setWeatherForecast(forecastCall.data.list);
       temp_max: data.main.temp_max, // Maximum temperature
       temp_min: data.main.temp_min, // Minimum temperature
       description: data.weather[0].description, // Weather description
-      icon: data.weather[0].icon // Weather icon
     }));}
 
     const fiveDayForecast = getDailyForecast(weatherForecast);
@@ -166,7 +165,7 @@ setWeatherForecast(forecastCall.data.list);
           <div className=" text-5xl tracking-wide text-white mb-5 sm:mb-0 ">Today </div>
           <div className="text-xl text-white flex items-end">
             {new Date(weather.dt * 1000).toLocaleDateString("en-US", { weekday: "long", year: "numeric", month: "long", day: "numeric",})}{" "}
-            <Image alt={"alt"} src={"/sun.jpg"} width={40} height={40} />{" "}
+            <Image alt={"alt"} src={"/sun.png"} width={40} height={40} />{" "}
           </div>
           <div className="text-5xl text-white my-3 ">{weather.main.temp}&deg;C </div>
           <div className="text-white text-xl">{weather.weather[0].description}</div>
@@ -175,13 +174,14 @@ setWeatherForecast(forecastCall.data.list);
             <BiSolidEditLocation /> {weather.name}, {weather.sys.country}
           </div>
         </div>
-        {fiveDayForecast.map((forecast) => (
-          <div key={forecast.date} className="right-side overflow-x-scroll  w-full xl:w-fit flex">
+            <div className="right-side overflow-x-scroll  w-full xl:w-fit flex">
+            {fiveDayForecast.map((forecast) => (
+          <div key={forecast.date}  >
           <div className="card h-40 mx-5 bg-slate-400 min-w-[120px] w-32 rounded-xl flex flex-col items-center ">
             <div className="pt-2 pb-4">{forecast.day}</div>
             <div className="icon">
               {" "}
-              <Image alt={"alt"} src={"/sun.jpg"} width={60} height={60} />
+              <Image alt={"alt"} src={"/sun.png"} width={60} height={60} />
             </div>
             <div>H: {forecast.temp_max}&deg;</div>
             <div>L: {forecast.temp_min}&deg;</div>
@@ -189,6 +189,8 @@ setWeatherForecast(forecastCall.data.list);
         </div>
 
         ))}
+            </div>
+        
         
       </div>
       <div className="bottom-side">
