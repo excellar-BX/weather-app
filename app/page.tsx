@@ -83,9 +83,9 @@ setWeatherForecast(forecastCall.data.list);
        console.log(weatherForecast)
     } catch (error) {
       setError(true);
-      city === ''?setMsg('search cannot be empty')
-      : setMsg(`Could not fetch weather details: ${error} `);
-    }
+      city === ''
+    ? setMsg('Search cannot be empty')
+    : setMsg(`Could not fetch weather details: ${error}`); }
   };
 
   const getTimeWithApPm = (timestamp: number) =>{
