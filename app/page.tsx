@@ -146,7 +146,7 @@ setWeatherForecast(forecastCall.data.list);
             type="text"
             value={city}
             onChange={(e) => {
-              setCity(e.target.value), setMsg(''), setError(false);
+              setCity(e.target.value), setMsg(''), setError(false), setWeather(null);
             }}
             placeholder="Enter a City name"
             maxLength={40}
