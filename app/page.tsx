@@ -6,6 +6,7 @@ import {
   BiSearch,
   BiSolidEditLocation,
   BiWind,
+  BiShowAlt,
 } from "react-icons/bi";
 
 const API_KEY = "0f8ca2f4ff712e4e9e189b30da0cbc64";
@@ -211,7 +212,7 @@ setWeatherForecast(forecastCall.data.list);
               <div>{weather.visibility / 1000}km</div>
             </div>
             <div className=" text-5xl icon">
-              <BiWind />
+              <BiShowAlt />
             </div>
           </div>
           <div className=" flex items-center justify-center text-xl py-3 rounded-xl bg-[white] bg-opacity-40  ">
@@ -245,24 +246,6 @@ setWeatherForecast(forecastCall.data.list);
             <div className="mr-5">
               <div>Wind Direction</div>
               <div>{getWindDirection(weather.wind.deg)}</div>
-            </div>
-            <div className=" text-5xl icon">
-              <BiWind />
-            </div>
-          </div>
-          <div className=" flex items-center justify-center text-xl py-3 rounded-xl bg-[white] bg-opacity-40  ">
-            <div className="mr-5">
-              <div>Wind Speed</div>
-              <div>12.5mph</div>
-            </div>
-            <div className=" text-5xl icon">
-              <BiWind />
-            </div>
-          </div>
-          <div className=" flex items-center justify-center text-xl py-3 rounded-xl bg-[white] bg-opacity-40  ">
-            <div className="mr-5">
-              <div>Wind Speed</div>
-              <div>12.5mph</div>
             </div>
             <div className=" text-5xl icon">
               <BiWind />
