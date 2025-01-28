@@ -5,10 +5,11 @@ import axios from "axios";
 import {
   BiSearch,
   BiSolidEditLocation,
-  BiWind,
+  
   BiShowAlt,
+  
 } from "react-icons/bi";
-import { WiStrongWind, WiHumidity, WiSunset, WiSunrise } from "react-icons/wi";
+import { WiStrongWind, WiHumidity, WiSunset, WiSunrise, WiWindDeg } from "react-icons/wi";
 
 const API_KEY = "0f8ca2f4ff712e4e9e189b30da0cbc64";
 
@@ -249,7 +250,7 @@ setWeatherForecast(forecastCall.data.list);
               <div>{getWindDirection(weather.wind.deg)}</div>
             </div>
             <div className=" text-5xl icon">
-              <BiWind />
+              <WiWindDeg />
             </div>
           </div>
         </div>
