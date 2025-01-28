@@ -179,7 +179,7 @@ setWeatherForecast(forecastCall.data.list);
           </div>
         </div>
         {fiveDayForecast.map((forecast) => (
-          <div className="right-side overflow-x-scroll  w-full xl:w-fit flex">
+          <div key={forecast.date} className="right-side overflow-x-scroll  w-full xl:w-fit flex">
           <div className="card h-40 mx-5 bg-slate-400 min-w-[120px] w-32 rounded-xl flex flex-col items-center ">
             <div className="pt-2 pb-4">{forecast.day}</div>
             <div className="icon">
