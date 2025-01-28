@@ -181,7 +181,7 @@ setWeatherForecast(forecastCall.data.list);
             <div className="right-side overflow-x-scroll  w-full xl:w-fit flex">
             {fiveDayForecast.map((forecast) => (
           <div key={forecast.date}  >
-          <div className="card h-40 mx-5 bg-[white] bg-opacity-40 min-w-[120px] w-32 rounded-xl flex flex-col items-center ">
+          <div className="card h-40 mx-3 sm:mx-5 bg-[white] bg-opacity-40 min-w-[120px] w-32 rounded-xl flex flex-col items-center ">
             <div className="pt-2 pb-4">{forecast.day}</div>
             <div className="icon">
               {" "}
@@ -205,7 +205,7 @@ setWeatherForecast(forecastCall.data.list);
               <div>Wind Speed</div>
               <div>{Math.round(weather.wind.speed * 2.23694)}mph</div>
             </div>
-            <div className=" text-2xl lg:text-5xl icon">
+            <div className=" text-3xl lg:text-5xl icon">
               <WiStrongWind />
             </div>
           </div>
@@ -214,7 +214,7 @@ setWeatherForecast(forecastCall.data.list);
               <div>Visibility</div>
               <div>{weather.visibility / 1000}km</div>
             </div>
-            <div className=" text-2xl lg:text-5xl icon">
+            <div className=" text-3xl lg:text-5xl icon">
               <BiShowAlt />
             </div>
           </div>
@@ -223,7 +223,7 @@ setWeatherForecast(forecastCall.data.list);
               <div>Humidity</div>
               <div>{weather.main.humidity}%</div>
             </div>
-            <div className=" text-2xl lg:text-5xl icon">
+            <div className=" text-3xl lg:text-5xl icon">
             <WiHumidity />
             </div>
           </div>
@@ -232,7 +232,7 @@ setWeatherForecast(forecastCall.data.list);
               <div>Sunrise</div>
               <div>{getTimeWithApPm(weather.sys.sunrise)}</div>
             </div>
-            <div className=" text-2xl lg:text-5xl icon">
+            <div className=" text-3xl lg:text-5xl icon">
               <WiSunrise />
             </div>
           </div>
@@ -241,7 +241,7 @@ setWeatherForecast(forecastCall.data.list);
               <div>Sunset</div>
               <div>{getTimeWithApPm(weather.sys.sunset)}</div>
             </div>
-            <div className=" text-2xl lg:text-5xl icon">
+            <div className=" text-3xl lg:text-5xl icon">
               <WiSunset />
             </div>
           </div>
@@ -250,7 +250,7 @@ setWeatherForecast(forecastCall.data.list);
               <div>Wind Direction</div>
               <div>{getWindDirection(weather.wind.deg)}</div>
             </div>
-            <div className="text-2xl lg:text-5xl icon">
+            <div className="text-3xl lg:text-5xl icon">
               <WiWindDeg />
             </div>
           </div>
