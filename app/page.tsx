@@ -143,14 +143,14 @@ setWeatherForecast(forecastCall.data.list);
         <form
           onSubmit={(e) => {
   e.preventDefault();
-            e.target.value.trim()
+          
   handleSearch();}} className="search border-b-2 w-[90%] sm:w-[60%] text-white items-end flex "
         >
           <input
             type="text"
             value={city}
             onChange={(e) => {
-              setCity(e.target.value), setMsg(''), setError(false), setWeather(null);
+              setCity(e.target.value.trim()), setMsg(''), setError(false), setWeather(null);
             }}
             placeholder="Enter a City name"
             maxLength={40}
