@@ -150,7 +150,7 @@ setWeatherForecast(forecastCall.data.list);
             }}
             placeholder="Enter a City name"
             maxLength={40}
-            className="bg-transparent cursor-pointer placeholder:text-[#ddd] w-full h-10 text-2xl outline-none border-none "
+            className="bg-transparent cursor-pointer placeholder:text-[#eee] w-full h-10 text-2xl outline-none border-none "
           />
           <button onClick={handleSearch} type="submit"  className="search-cta outline-none border-none bg-transparent cursor-pointer">
             <BiSearch />
@@ -177,7 +177,7 @@ setWeatherForecast(forecastCall.data.list);
             <div className="right-side overflow-x-scroll  w-full xl:w-fit flex">
             {fiveDayForecast.map((forecast) => (
           <div key={forecast.date}  >
-          <div className="card h-40 mx-5 bg-slate-400 min-w-[120px] w-32 rounded-xl flex flex-col items-center ">
+          <div className="card h-40 mx-5 bg-[white] bg-opacity-40 min-w-[120px] w-32 rounded-xl flex flex-col items-center ">
             <div className="pt-2 pb-4">{forecast.day}</div>
             <div className="icon">
               {" "}
@@ -196,10 +196,10 @@ setWeatherForecast(forecastCall.data.list);
       <div className="bottom-side">
         <div className="text-3xl text-white mt-10">Weather Details</div>
         <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-5 my-5  ">
-          <div className=" flex items-center justify-center text-xl py-3 rounded-xl bg-slate-400 bg-opacity-60  ">
+          <div className=" flex items-center justify-center text-xl py-3 rounded-xl bg-[white] bg-opacity-40  ">
             <div className="mr-5">
               <div>Wind Speed</div>
-              <div>{weather.wind.speed * 2.23694}mph</div>
+              <div>{Math.floor(weather.wind.speed * 2.23694)}mph</div>
             </div>
             <div className=" text-5xl icon">
               <BiWind />
