@@ -3,10 +3,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import axios from "axios";
 import {
-  BiCurrentLocation,
-  BiHeart,
   BiSearch,
-  BiSearchAlt,
   BiSolidEditLocation,
   BiWind,
 } from "react-icons/bi";
@@ -14,13 +11,13 @@ import {
 const API_KEY = "0f8ca2f4ff712e4e9e189b30da0cbc64";
 
 const Page = () => {
-  const date = new Date();
+ /* const date = new Date();
   const currentDate = date.toLocaleDateString("en-US", {
     weekday: "long",
     year: "numeric",
     month: "long",
     day: "numeric",
-  });
+  });*/
   type CurrentWeather = {
     name: string;
     dt: number;
@@ -172,7 +169,7 @@ setWeatherForecast(forecastCall.data.list);
             <Image alt={"alt"} src={"/sun.jpg"} width={40} height={40} />{" "}
           </div>
           <div className="text-5xl text-white my-3 ">{weather.main.temp}&deg;C </div>
-          <div className="text-white text-xl">{weather.weather[0].description}</div>
+          <div className="text-white text-xl">{wpeather.weather[0].description}</div>
           <div className="flex mx-auto lg:mx-0 bg-white rounded-full my-3 items-center py-2 px-5 text-lg w-fit  ">
             {" "}
             <BiSolidEditLocation /> {weather.name}, {weather.sys.country}
@@ -272,7 +269,7 @@ setWeatherForecast(forecastCall.data.list);
         </div>
       </div>
       </div>
-    ): (error?  <div className="text-2xl my-10 text-white" ><span className="text-3xl" >Ooops!.....</span> Couldn't Check for "{city}", Try Again</div> : <div className="text-2xl my-10 text-white" >No data availaible</div> )
+    ): (error?  <div className="text-2xl my-10 text-white" ><span className="text-3xl" >Ooops!.....</span> Couldn't Check for &quot;{city}&quot;, Try Again</div> : <div className="text-2xl my-10 text-white" >No data availaible</div> )
   }
       </div>
     )
