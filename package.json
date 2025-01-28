@@ -52,7 +52,7 @@
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
-  }
+  },
   "overrides": {
   "framer": {
     "react": "^19.0.0",
