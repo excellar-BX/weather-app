@@ -169,7 +169,7 @@ setWeatherForecast(forecastCall.data.list);
             <Image alt={"alt"} src={"/sun.jpg"} width={40} height={40} />{" "}
           </div>
           <div className="text-5xl text-white my-3 ">{weather.main.temp}&deg;C </div>
-          <div className="text-white text-xl">{wpeather.weather[0].description}</div>
+          <div className="text-white text-xl">{weather.weather[0].description}</div>
           <div className="flex mx-auto lg:mx-0 bg-white rounded-full my-3 items-center py-2 px-5 text-lg w-fit  ">
             {" "}
             <BiSolidEditLocation /> {weather.name}, {weather.sys.country}
