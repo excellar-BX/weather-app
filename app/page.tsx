@@ -200,8 +200,8 @@ setWeatherForecast(forecastCall.data.list);
       <div className="bottom-side">
         <div className="text-3xl text-white mt-10">Weather Details</div>
         <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-5 my-5  ">
-          <div className="sm:flex-row gap-2 flex-col flex items-center justify-center text-lg sm:text-xl py-3 rounded-xl bg-[white] bg-opacity-40  ">
-            <div className="mr-5">
+          <div className=" flex items-center justify-center text-lg sm:text-xl py-3 rounded-xl bg-[white] bg-opacity-40  ">
+            <div className="mr-5 sm:flex-col gap-2 flex-row">
               <div>Wind Speed</div>
               <div>{Math.round(weather.wind.speed * 2.23694)}mph</div>
             </div>
@@ -209,8 +209,8 @@ setWeatherForecast(forecastCall.data.list);
               <WiStrongWind />
             </div>
           </div>
-          <div className="sm:flex-row gap-2 flex-col flex items-center justify-center text-lg sm:text-xl py-3 rounded-xl bg-[white] bg-opacity-40  ">
-            <div className="mr-5">
+          <div className="flex items-center justify-center text-lg sm:text-xl py-3 rounded-xl bg-[white] bg-opacity-40  ">
+            <div className="mr-5 sm:flex-col gap-2 flex-row">
               <div>Visibility</div>
               <div>{weather.visibility / 1000}km</div>
             </div>
@@ -218,8 +218,8 @@ setWeatherForecast(forecastCall.data.list);
               <BiShowAlt />
             </div>
           </div>
-          <div className="sm:flex-row gap-2 flex-col flex items-center justify-center text-lg sm:text-xl py-3 rounded-xl bg-[white] bg-opacity-40  ">
-            <div className="mr-5">
+          <div className="flex items-center justify-center text-lg sm:text-xl py-3 rounded-xl bg-[white] bg-opacity-40  ">
+            <div className="mr-5 sm:flex-col gap-2 flex-row">
               <div>Humidity</div>
               <div>{weather.main.humidity}%</div>
             </div>
@@ -227,8 +227,8 @@ setWeatherForecast(forecastCall.data.list);
             <WiHumidity />
             </div>
           </div>
-          <div className="sm:flex-row gap-2 flex-col flex items-center justify-center text-lg sm:text-xl py-3 rounded-xl bg-[white] bg-opacity-40  ">
-            <div className="mr-5">
+          <div className="flex items-center justify-center text-lg sm:text-xl py-3 rounded-xl bg-[white] bg-opacity-40  ">
+            <div className="mr-5 sm:flex-col gap-2 flex-row">
               <div>Sunrise</div>
               <div>{getTimeWithApPm(weather.sys.sunrise)}</div>
             </div>
@@ -236,8 +236,8 @@ setWeatherForecast(forecastCall.data.list);
               <WiSunrise />
             </div>
           </div>
-          <div className="sm:flex-row gap-2 flex-col flex items-center justify-center text-lg sm:text-xl py-3 rounded-xl bg-[white] bg-opacity-40  ">
-            <div className="mr-5">
+          <div className="flex items-center justify-center text-lg sm:text-xl py-3 rounded-xl bg-[white] bg-opacity-40  ">
+            <div className="mr-5 sm:flex-col gap-2 flex-row">
               <div>Sunset</div>
               <div>{getTimeWithApPm(weather.sys.sunset)}</div>
             </div>
@@ -245,8 +245,8 @@ setWeatherForecast(forecastCall.data.list);
               <WiSunset />
             </div>
           </div>
-          <div className="sm:flex-row gap-2 flex-col flex items-center justify-center text-lg sm:text-xl py-3 rounded-xl bg-[white] bg-opacity-40  ">
-            <div className="mr-5">
+          <div className=" flex items-center justify-center text-lg sm:text-xl py-3 rounded-xl bg-[white] bg-opacity-40  ">
+            <div className="mr-5 sm:flex-col gap-2 flex-row">
               <div>Wind Direction</div>
               <div>{getWindDirection(weather.wind.deg)}</div>
             </div>
