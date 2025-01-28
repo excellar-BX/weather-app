@@ -13,7 +13,7 @@ import {
 
 const API_KEY = "0f8ca2f4ff712e4e9e189b30da0cbc64";
 
-const page = () => {
+const Page = () => {
   const date = new Date();
   const currentDate = date.toLocaleDateString("en-US", {
     weekday: "long",
@@ -53,6 +53,8 @@ const page = () => {
     main: {
       temp: number;
       humidity: number;
+      temp_min: number;
+      temp_max: number;
     };
     weather: [
       {
@@ -117,6 +119,24 @@ setWeatherForecast(forecastCall.data.list);
     return "Invalid Direction";
   }
 
+
+  const getDailyForecast = (weatherForecast: any[]) => {
+    // Filter the forecast to only include data at 12:00 PM each day
+    const dailyForecast = weatherForecast.filter((data) =>
+      data.dt_txt.includes("12:00:00")
+    );
+  
+    return dailyForecast.map((data) => ({
+      date: data.dt_txt, // Full date string
+      day: new Date(data.dt * 1000).toLocaleDateString("en-US", { weekday: "long" }), // Weekday name
+      temp_max: data.main.temp_max, // Maximum temperature
+      temp_min: data.main.temp_min, // Minimum temperature
+      description: data.weather[0].description, // Weather description
+      icon: data.weather[0].icon // Weather icon
+    }));}
+
+    const fiveDayForecast = getDailyForecast(weatherForecast);
+
   return (
     <div className="max-w-[90%] p-0 pt-20 lg:p-20 mx-auto relative  ">
       <div className="heading flex flex-col lg:flex-row-reverse  justify-between items-center  ">
@@ -158,17 +178,21 @@ setWeatherForecast(forecastCall.data.list);
             <BiSolidEditLocation /> {weather.name}, {weather.sys.country}
           </div>
         </div>
-        <div className="right-side overflow-x-scroll  w-full xl:w-fit flex">
+        {fiveDayForecast.map((forecast) => (
+          <div className="right-side overflow-x-scroll  w-full xl:w-fit flex">
           <div className="card h-40 mx-5 bg-slate-400 min-w-[120px] w-32 rounded-xl flex flex-col items-center ">
-            <div className="pt-2 pb-4">Mon</div>
+            <div className="pt-2 pb-4">{forecast.day}</div>
             <div className="icon">
               {" "}
               <Image alt={"alt"} src={"/sun.jpg"} width={60} height={60} />
             </div>
-            <div>H: 60&deg;</div>
-            <div>L: 75&deg;</div>
+            <div>H: {forecast.temp_max}&deg;</div>
+            <div>L: {forecast.temp_min}&deg;</div>
           </div>
         </div>
+
+        ))}
+        
       </div>
       <div className="bottom-side">
         <div className="text-3xl text-white mt-10">Weather Details</div>
@@ -254,4 +278,4 @@ setWeatherForecast(forecastCall.data.list);
     )
 };
 
-export default page;
+export default Page;
