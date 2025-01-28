@@ -157,7 +157,7 @@ setWeatherForecast(forecastCall.data.list);
           </button>
         </form>
       </div>
-      <span className="text-red-600 " >{msg}</span>
+      {/*<span className="text-red-600 " >{msg}</span>*/} {/*Developers can uncomment*/}
     {weather ? (
       <div key={weather.dt} >
           <div className="today xl:flex-row flex-col flex items-center ">
@@ -199,13 +199,13 @@ setWeatherForecast(forecastCall.data.list);
           <div className=" flex items-center justify-center text-xl py-3 rounded-xl bg-[white] bg-opacity-40  ">
             <div className="mr-5">
               <div>Wind Speed</div>
-              <div>{Math.floor(weather.wind.speed * 2.23694)}mph</div>
+              <div>{Math.round(weather.wind.speed * 2.23694)}mph</div>
             </div>
             <div className=" text-5xl icon">
               <BiWind />
             </div>
           </div>
-          <div className=" flex items-center justify-center text-xl py-3 rounded-xl bg-slate-400 bg-opacity-60  ">
+          <div className=" flex items-center justify-center text-xl py-3 rounded-xl bg-[white] bg-opacity-40  ">
             <div className="mr-5">
               <div>Visibility</div>
               <div>{weather.visibility / 1000}km</div>
@@ -214,7 +214,7 @@ setWeatherForecast(forecastCall.data.list);
               <BiWind />
             </div>
           </div>
-          <div className=" flex items-center justify-center text-xl py-3 rounded-xl bg-slate-400 bg-opacity-60  ">
+          <div className=" flex items-center justify-center text-xl py-3 rounded-xl bg-[white] bg-opacity-40  ">
             <div className="mr-5">
               <div>Humidity</div>
               <div>{weather.main.humidity}%</div>
@@ -223,7 +223,7 @@ setWeatherForecast(forecastCall.data.list);
               <BiWind />
             </div>
           </div>
-          <div className=" flex items-center justify-center text-xl py-3 rounded-xl bg-slate-400 bg-opacity-60  ">
+          <div className=" flex items-center justify-center text-xl py-3 rounded-xl bg-[white] bg-opacity-40  ">
             <div className="mr-5">
               <div>Sunrise</div>
               <div>{getTimeWithApPm(weather.sys.sunrise)}</div>
@@ -232,7 +232,7 @@ setWeatherForecast(forecastCall.data.list);
               <BiWind />
             </div>
           </div>
-          <div className=" flex items-center justify-center text-xl py-3 rounded-xl bg-slate-400 bg-opacity-60  ">
+          <div className=" flex items-center justify-center text-xl py-3 rounded-xl bg-[white] bg-opacity-40  ">
             <div className="mr-5">
               <div>Sunset</div>
               <div>{getTimeWithApPm(weather.sys.sunset)}</div>
@@ -241,7 +241,7 @@ setWeatherForecast(forecastCall.data.list);
               <BiWind />
             </div>
           </div>
-          <div className=" flex items-center justify-center text-xl py-3 rounded-xl bg-slate-400 bg-opacity-60  ">
+          <div className=" flex items-center justify-center text-xl py-3 rounded-xl bg-[white] bg-opacity-40  ">
             <div className="mr-5">
               <div>Wind Direction</div>
               <div>{getWindDirection(weather.wind.deg)}</div>
@@ -250,7 +250,7 @@ setWeatherForecast(forecastCall.data.list);
               <BiWind />
             </div>
           </div>
-          <div className=" flex items-center justify-center text-xl py-3 rounded-xl bg-slate-400 bg-opacity-60  ">
+          <div className=" flex items-center justify-center text-xl py-3 rounded-xl bg-[white] bg-opacity-40  ">
             <div className="mr-5">
               <div>Wind Speed</div>
               <div>12.5mph</div>
@@ -259,7 +259,7 @@ setWeatherForecast(forecastCall.data.list);
               <BiWind />
             </div>
           </div>
-          <div className=" flex items-center justify-center text-xl py-3 rounded-xl bg-slate-400 bg-opacity-60  ">
+          <div className=" flex items-center justify-center text-xl py-3 rounded-xl bg-[white] bg-opacity-40  ">
             <div className="mr-5">
               <div>Wind Speed</div>
               <div>12.5mph</div>
