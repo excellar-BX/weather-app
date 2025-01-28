@@ -143,6 +143,7 @@ setWeatherForecast(forecastCall.data.list);
         <form
           onSubmit={(e) => {
   e.preventDefault();
+            e.target.value.trim()
   handleSearch();}} className="search border-b-2 w-[90%] sm:w-[60%] text-white items-end flex "
         >
           <input
