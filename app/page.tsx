@@ -144,7 +144,7 @@ const shareData = {
 
 
 // Share must be triggered by "user activation"
-const share = () => {
+const share = async () => {
   try {
     await navigator.share(shareData);
     
