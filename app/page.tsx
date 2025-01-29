@@ -156,7 +156,14 @@ const share = async () => {
   
   return (
     <div className="max-w-[90%] p-0 pt-20 lg:p-20 mx-auto relative  ">
-      <div onClick={()=>{share()}} className="p-3 text-3xl text-white bg-[black] absolute bottom-5 right-5 rounded-full" ></BiShareAlt></div>
+        <div
+      onClick={() => {
+        share();
+      }}
+      className="p-3 text-3xl text-white bg-[black] absolute bottom-5 right-5 rounded-full"
+    >
+      <BiShareAlt />
+    </div>
       <div className="heading flex flex-col lg:flex-row-reverse  justify-between items-center  ">
         <div className="text-right text-3xl text-white mb-10 lg:mb-0 ">Weather App</div>
         <form
