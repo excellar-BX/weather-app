@@ -136,6 +136,24 @@ setWeatherForecast(forecastCall.data.list);
 
     const fiveDayForecast = getDailyForecast(weatherForecast);
 
+const shareData = {
+  title: "check out my weather condition",
+  text: ``,
+  url: "https://excellence-weather-app.vercel.app",
+};
+
+
+// Share must be triggered by "user activation"
+const share = () => {
+  try {
+    await navigator.share(shareData);
+    
+  } catch (err) {
+    console.log(err)
+  }
+});
+
+  
   return (
     <div className="max-w-[90%] p-0 pt-20 lg:p-20 mx-auto relative  ">
       <div className="heading flex flex-col lg:flex-row-reverse  justify-between items-center  ">
