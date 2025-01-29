@@ -139,8 +139,8 @@ setWeatherForecast(forecastCall.data.list);
 const shareData = {
   title: "check out my weather condition",
   text: `Location:${city}, 
-  Temperature: ${weather?.main?.temp ?? "N/A"}°C, 
-  check out other details at https://excellence-weather-app.vercel.app`,
+Temperature: ${weather?.main?.temp ?? "N/A"}°C, 
+check out other details at:`,
   url: "https://excellence-weather-app.vercel.app",
 };
 
