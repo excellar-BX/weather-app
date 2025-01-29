@@ -5,7 +5,7 @@ import axios from "axios";
 import {
   BiSearch,
   BiSolidEditLocation,
-  
+  BiShareAlt,
   BiShowAlt,
   
 } from "react-icons/bi";
@@ -156,6 +156,7 @@ const share = () => {
   
   return (
     <div className="max-w-[90%] p-0 pt-20 lg:p-20 mx-auto relative  ">
+      <div onClick={share} className="p-3 text-3xl text-white bg-[black] rounded full" ></BiShareAlt></div>
       <div className="heading flex flex-col lg:flex-row-reverse  justify-between items-center  ">
         <div className="text-right text-3xl text-white mb-10 lg:mb-0 ">Weather App</div>
         <form
