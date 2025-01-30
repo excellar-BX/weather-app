@@ -197,7 +197,7 @@ const share = async () => {
           <div className=" text-5xl tracking-wide text-white mb-5 sm:mb-0 ">Today </div>
           <div className="text-xl text-white flex items-end">
             {new Date(weather.dt * 1000).toLocaleDateString("en-US", { weekday: "long", year: "numeric", month: "long", day: "numeric",})}{" "}
-            <Image alt={"alt"} src={"/sun.png"} width={40} height={40} />{" "}
+            <Image alt={"alt"} src={"/sun_cloud.png"} width={40} height={40} />{" "}
           </div>
           <div className="text-5xl text-white my-3 ">{weather.main.temp}&deg;C </div>
           <div className="text-white text-xl">{weather.weather[0].description}</div>
@@ -213,7 +213,7 @@ const share = async () => {
             <div className="pt-2 pb-4">{forecast.day}</div>
             <div className="icon">
               {" "}
-              <Image alt={"alt"} src={"/sun.png"} width={60} height={60} />
+              <Image alt={"alt"} src={"/sun_cloud.png"} width={60} height={60} />
             </div>
             <div>H: {forecast.temp_max}&deg;</div>
             <div>L: {forecast.temp_min}&deg;</div>
