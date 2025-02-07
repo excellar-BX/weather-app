@@ -297,8 +297,8 @@ const share = async () => {
       </div>
       </div>
     ): (error?  <div className="text-2xl my-10 text-white" ><span className="text-3xl" >Ooops!.....</span> Couldn't Check for &quot;{city}&quot;, Try Again</div>
-      : <div className="text-white text-center">
-        <div className="mx-auto"><Image 
+      : <div className="text-white my-10 text-center">
+        <div className="mx-auto w-fit"><Image 
   src={"/search.png"} 
   alt={"search"} 
   width={250} 
