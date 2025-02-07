@@ -220,7 +220,7 @@ const share = async () => {
             <div className="icon">
               {" "}
               <Image 
-  src={"/search.png"} 
+  src={`https://openweathermap.org/img/wn/${forecast.icon}@2x.png`} 
   alt={forecast.icon} 
   width={60} 
   height={60} 
