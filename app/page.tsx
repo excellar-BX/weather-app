@@ -220,7 +220,7 @@ const share = async () => {
             <div className="icon">
               {" "}
               <Image 
-  src={"https://openweathermap.org/img/wn/03n@2x.png"} 
+  src={"/search.png"} 
   alt={forecast.icon} 
   width={60} 
   height={60} 
@@ -296,7 +296,17 @@ const share = async () => {
         </div>
       </div>
       </div>
-    ): (error?  <div className="text-2xl my-10 text-white" ><span className="text-3xl" >Ooops!.....</span> Couldn't Check for &quot;{city}&quot;, Try Again</div> : <div className="text-2xl my-10 text-white" >No data availaible</div> )
+    ): (error?  <div className="text-2xl my-10 text-white" ><span className="text-3xl" >Ooops!.....</span> Couldn't Check for &quot;{city}&quot;, Try Again</div>
+      : <div className="text-white text-center">
+        <div className="mx-auto"><Image 
+  src={"/search.png"} 
+  alt={"search"} 
+  width={250} 
+  height={250} 
+/></div>
+        <div className="text-2xl">Search for city</div>
+        <div>Find out weather conditions of the city</div>
+      </div> )
   }
       </div>
     )
