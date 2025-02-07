@@ -131,6 +131,7 @@ setWeatherForecast(forecastCall.data.list);
       day: new Date(data.dt * 1000).toLocaleDateString("en-US", { weekday: "long" }), // Weekday name
       temp_max: data.main.temp_max, // Maximum temperature
       temp_min: data.main.temp_min, // Minimum temperature
+      icon: data.weather[0].icon,
       description: data.weather[0].description, // Weather description
     }));}
 
