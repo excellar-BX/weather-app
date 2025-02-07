@@ -304,8 +304,8 @@ const share = async () => {
   width={250} 
   height={250} 
 /></div>
-        <div className="text-2xl">Search for city</div>
-        <div>Find out weather conditions of the city</div>
+        <div className="text-2xl font-semibold">Search for city</div>
+        <div className="text-lg">Find out weather conditions of the city</div>
       </div> )
   }
       </div>
