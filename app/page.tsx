@@ -213,7 +213,7 @@ const share = async () => {
             <div className="pt-2 pb-4">{forecast.day}</div>
             <div className="icon">
               {" "}
-              <Image alt={"alt"} src={"/sun_cloud.png"} width={60} height={60} />
+              <Image src={`https://openweathermap.org/img/wn/${weather?.weather[0]?.icon}@2x.png`} alt={weather?.weather[0]?.description} width={80} height={80} />
             </div>
             <div>H: {forecast.temp_max}&deg;</div>
             <div>L: {forecast.temp_min}&deg;</div>
