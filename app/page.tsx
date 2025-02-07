@@ -131,7 +131,7 @@ setWeatherForecast(forecastCall.data.list);
       day: new Date(data.dt * 1000).toLocaleDateString("en-US", { weekday: "long" }), // Weekday name
       temp_max: data.main.temp_max, // Maximum temperature
       temp_min: data.main.temp_min, // Minimum temperature
-      icon: data?.weather[0]?.icon,
+      icon: data.weather[0].icon,
       description: data.weather[0].description, // Weather description
     }));}
 
@@ -200,7 +200,7 @@ const share = async () => {
             {new Date(weather.dt * 1000).toLocaleDateString("en-US", { weekday: "long", year: "numeric", month: "long", day: "numeric",})}{" "}
             <Image 
   src={`https://openweathermap.org/img/wn/${weather?.weather[0]?.icon}@2x.png`} 
-  alt={weather?.weather[0]?.icon} 
+  alt={weather.weather[0].icon} 
   width={80} 
   height={80} 
 />
@@ -220,7 +220,7 @@ const share = async () => {
             <div className="icon">
               {" "}
               <Image 
-  src={`https://openweathermap.org/img/wn/${forecast.icon}@2x.png`} 
+  src={`https://openweathermap.org/img/wn/03n@2x.png`} 
   alt={forecast.icon} 
   width={60} 
   height={60} 
