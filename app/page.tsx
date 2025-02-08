@@ -222,7 +222,7 @@ const share = async () => {
     {weather ? (
       <div key={weather.dt} >
           <div className="today xl:flex-row flex-col flex items-center ">
-        <div className="left-side text-center lg:text-left xl:mb-0 mb-20 mt-20 w-fit mx-auto xl:w-[30%] flex-1 ">
+        <div className="left-side text-center lg:text-left xl:mb-0 mb-20 mt-20 w-fit mx-auto xl:w-[40%] flex-1 ">
           <div className=" text-5xl tracking-wide text-white mb-5 sm:mb-0 ">Today </div>
           <div className="text-xl text-white flex items-end">
             {new Date(weather.dt * 1000).toLocaleDateString("en-US", { weekday: "long", year: "numeric", month: "long", day: "numeric",})}{" "}
