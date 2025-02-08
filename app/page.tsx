@@ -240,7 +240,7 @@ const share = async () => {
             <BiSolidEditLocation /> {weather.name}, {weather.sys.country}
           </div>
         </div>
-            <div className="right-side overflow-x-scroll  w-full xl:w-fit flex">
+            <div className="right-side overflow-x-scroll xl:w-[60%] w-full flex">
             {fiveDayForecast.map((forecast) => (
           <div key={forecast.date}  >
           <div className="card h-40 mx-3 sm:mx-5 bg-[white] bg-opacity-40 min-w-[120px] w-32 rounded-xl flex flex-col items-center ">
