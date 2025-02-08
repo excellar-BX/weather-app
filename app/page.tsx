@@ -206,7 +206,7 @@ const getCustomWeatherIcon = (iconCode: string | undefined): string => {
             type="text"
             value={city}
             onChange={(e) => {
-              setCity(e.target.value.trim()), setMsg(''), setError(false), setWeather(null);
+              setCity(e.target.value), setMsg(''), setError(false), setWeather(null);
             }}
             placeholder="Enter a City name"
             maxLength={40}
