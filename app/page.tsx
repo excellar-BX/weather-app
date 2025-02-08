@@ -181,7 +181,7 @@ const getCustomWeatherIcon = (iconCode: string | undefined): string => {
     "50n": "/mist.png",
   };
 
-  return iconMap[iconCode] || "/default.png"; // Return matching icon or default
+  return iconMap[iconCode] || "/weather.png"; // Return matching icon or default
 };
 
   return (
@@ -226,7 +226,7 @@ const getCustomWeatherIcon = (iconCode: string | undefined): string => {
           <div className="text-xl text-white flex items-end">
             {new Date(weather.dt * 1000).toLocaleDateString("en-US", { weekday: "long", year: "numeric", month: "long", day: "numeric",})}{" "}
             <Image 
-  src={`https://openweathermap.org/img/wn/${weather?.weather[0]?.icon}@2x.png`} 
+  src={getCustomWeatherIcon(weather?.weather[0]?.icon)}
   alt={weather.weather[0].icon} 
   width={80} 
   height={80} 
@@ -247,7 +247,7 @@ const getCustomWeatherIcon = (iconCode: string | undefined): string => {
             <div className="icon">
               {" "}
               <Image 
-  src={`https://openweathermap.org/img/wn/${forecast.icon}@2x.png`} 
+  src={getCustomWeatherIcon(forecast.icon)}
   alt={forecast.icon} 
   width={60} 
   height={60} 
