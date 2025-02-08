@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Head from "next/head";
 import React, { useState } from "react";
 import axios from "axios";
 import {
@@ -185,6 +186,15 @@ const getCustomWeatherIcon = (iconCode: string | undefined): string => {
 };
 
   return (
+
+     <>
+        <Head>
+          <title>Weather app</title>
+      <link rel="icon" type="image/png" href='/public/partly-cloudy' />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Check live weather updates!" />
+    </Head>
+    
     <div className="max-w-[90%] p-0 pt-20 lg:p-20 mx-auto relative  ">
         <div
       onClick={() => {
@@ -336,6 +346,7 @@ const getCustomWeatherIcon = (iconCode: string | undefined): string => {
       </div> )
   }
       </div>
+     </>
     )
 };
 
