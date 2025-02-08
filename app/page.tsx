@@ -156,6 +156,34 @@ const share = async () => {
   }
 };
 
+
+
+  const getCustomWeatherIcon = (iconCode: string | undefined): string => {
+  if (!iconCode) return "/default.svg"; // Default icon if no code is provided
+
+  const iconMap: { [key: string]: string } = {
+    "01d": "/sunny.svg",
+    "01n": "/night-clear.svg",
+    "02d": "/partly-cloudy.svg",
+    "02n": "/night-cloudy.svg",
+    "03d": "/cloudy.svg",
+    "03n": "/cloudy.svg",
+    "04d": "/broken-clouds.svg",
+    "04n": "/broken-clouds.svg",
+    "09d": "/shower-rain.svg",
+    "09n": "/shower-rain.svg",
+    "10d": "/rain.svg",
+    "10n": "/night-rain.svg",
+    "11d": "/thunderstorm.svg",
+    "11n": "/thunderstorm.svg",
+    "13d": "/snow.svg",
+    "13n": "/snow.svg",
+    "50d": "/mist.svg",
+    "50n": "/mist.svg",
+  };
+
+  return iconMap[iconCode] || "/default.svg"; // Return matching icon or default
+};
   
   return (
     <div className="max-w-[90%] p-0 pt-20 lg:p-20 mx-auto relative  ">
