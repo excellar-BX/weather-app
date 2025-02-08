@@ -190,7 +190,7 @@ const getCustomWeatherIcon = (iconCode: string | undefined): string => {
      <>
         <Head>
           <title>Weather app</title>
-      <link rel="icon" type="image/png" href='/public/partly-cloudy' />
+      <link rel="icon" type="image/png" href='/partly-cloudy' />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="Check live weather updates!" />
     </Head>
